@@ -24,7 +24,7 @@ INSTALL_LIBRARY_PATH = $(DESTDIR)$(PREFIX)/$(LIBRARY_PATH)
 
 INSTALL ?= cp -a
 
-CC = gcc -std=c89
+CC = gcc -std=c99
 
 # validate gcc version for use fstack-protector-strong
 MIN_GCC_VERSION = "4.9"
@@ -142,7 +142,7 @@ uninstall-cjson: uninstall-utils
 	$(RM) $(INSTALL_LIBRARY_PATH)/$(CJSON_SHARED_VERSION)
 	$(RM) $(INSTALL_LIBRARY_PATH)/$(CJSON_SHARED_SO)
 	$(RM) $(INSTALL_INCLUDE_PATH)/cJSON.h
-	
+
 #cJSON_Utils
 uninstall-utils:
 	$(RM) $(INSTALL_LIBRARY_PATH)/$(UTILS_SHARED)
